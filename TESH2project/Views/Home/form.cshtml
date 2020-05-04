@@ -1,0 +1,42 @@
+@{
+	if(IsPost){
+		string companyname=Request.Form["companyname"];
+		string contactname=Request.Form["contactname"];
+		int employeecount=Request.Form["employees"].AsInt();
+
+	<text>
+		You entred: @companyname
+		<br />
+		Comapany Name:@contactname
+		<br />
+		Employee Count: @employeecount
+		<br />
+	</text>
+	}
+}
+
+		<form action="/" method="post">
+			<fieldset>
+				<legend>
+					Add Customer
+				</legend>
+				<div>
+					<label for="CompanyName">Company Name:</label>
+					<input type="text" name="CompanyName" value="" />
+				</div>
+				<div>
+					<label for="ContactName">Contact Name</label>
+					<input type="text" name="ContactName" value="" />
+				</div>
+                <div>
+                    <label for="Employees"> Employess Count</label>
+                    <input type="text" name="employees" value="" />
+                </div>
+                <div>
+                    <label>
+						&nbsp;
+					</label>
+                    <input type="submit" name="Submit" value="submit" />
+				</div>
+			</fieldset>
+		</form>
