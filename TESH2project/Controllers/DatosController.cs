@@ -83,8 +83,9 @@ namespace TESH2project.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Entry(datos).State = EntityState.Modified;
-                db.SaveChanges();
+                db.Entry(datos).State = EntityState.Modified;//Para modificar los datos en ves de crear
+
+                db.SaveChanges();//Pasa al siguiente registro
                 return RedirectToAction("Index");
             }
             return View(datos);
